@@ -18,11 +18,7 @@ function Toggle({children}) {
 }
 
 function useToggle() {
-  const context = React.useContext(ToggleContext)
-  if (context === undefined) {
-    throw new Error('useToggle must be used within a <Toggle />')
-  }
-  return context
+  return React.useContext(ToggleContext)
 }
 function ToggleOn({children}) {
   const {on} = useToggle()
